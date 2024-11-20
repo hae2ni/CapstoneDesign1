@@ -19,14 +19,18 @@ align-items: center;
 
 
   html, body {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
     min-width: 100vw;
     min-height: 100vh;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    overflow: hidden;
-
-  
+   overflow-x: hidden;
+   
   }
 a {
   cursor: pointer;

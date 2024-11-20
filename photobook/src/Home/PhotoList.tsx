@@ -42,9 +42,6 @@ export default function PhotoList() {
 const Container = styled.div`
   ${rowFlex}
 
-  width: 100vw;
-  height: 100vh;
-
   flex-wrap: wrap;
 
   gap: 2rem;

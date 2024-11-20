@@ -30,6 +30,7 @@ interface ImageType {
 }
 
 const Image = styled.img<ImageType>`
-  width: 34.3rem;
-  height: ${(props) => (props.$even ? "38rem" : "43.5rem")};
+  width: 35rem;
+  height: ${(props) => (props.$even ? "35rem" : "40rem")};
+  border-radius: 10px;
 `;
