@@ -73,4 +73,9 @@ const AttachedFile = styled.p`
   font-size: 16px;
   font-weight: bold;
   color: #999;
+
+  width: 21rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
