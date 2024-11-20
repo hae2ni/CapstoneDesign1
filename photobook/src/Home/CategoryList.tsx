@@ -22,7 +22,6 @@ export default function CategoryList() {
 
 const Container = styled.div`
   ${rowFlex}
-
   gap: 2rem;
 `;
 
@@ -38,7 +37,7 @@ const Divided = styled(DividedIcon)`
   height: 1.3rem;
 `;
 const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
   cursor: pointer;
 `;
