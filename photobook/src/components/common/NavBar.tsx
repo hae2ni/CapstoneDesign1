@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { rowFlex } from "../styles/common";
+import { rowFlex } from "../../styles/common";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <Container>
-      <Text to="/home">Home</Text>
+      <Text to="/">Home</Text>
       <Text to="/album">Albums</Text>
       <Text to="/addphoto">AddPhotos</Text>
     </Container>
