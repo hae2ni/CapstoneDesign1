@@ -3,18 +3,8 @@ import { columnFlex, rowFlex } from "../../styles/common";
 import { CATEGORY_LIST } from "../../core/category";
 import { useFileStore } from "../../core/useFileStore";
 
-interface CategoryProps {
-  clicked: boolean;
-  setClicked: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export default function Category(props: CategoryProps) {
-  const category = useFileStore((state) => state.category);
+export default function Category() {
   const setCategory = useFileStore((state) => state.setCategory);
-
-  function handleBtnClicked(data: string) {
-    setCategory(data);
-  }
 
   return (
     <Wrapper>
@@ -25,7 +15,7 @@ export default function Category(props: CategoryProps) {
             <CategoryWrapper
               value={data}
               key={index}
-              onClick={() => handleBtnClicked(data)}
+              onClick={() => setCategory(data)}
             >
               {data}
             </CategoryWrapper>

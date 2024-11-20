@@ -2,11 +2,8 @@ import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import Category from "./Category";
 import { useFileStore } from "../../core/useFileStore";
-import { useState } from "react";
 
 export default function PhotoSummary() {
-  const [clicked, setClicked] = useState("");
-
   const title = useFileStore((state) => state.title);
   const summary = useFileStore((state) => state.summary);
   const setTitle = useFileStore((state) => state.setTitle);
@@ -29,7 +26,7 @@ export default function PhotoSummary() {
         value={title}
         placeholder="제목을 입력해주세요."
       />
-      <Category clicked={clicked} setClicked={setClicked} />
+      <Category />
       <Summary
         value={summary}
         onChange={handleSummary}
