@@ -9,7 +9,7 @@ interface PhotoContainerType {
 }
 
 export default function PhotoContainer(props: PhotoContainerType) {
-  const { photo, even, title, summary } = props;
+  const { photo, even, title } = props;
 
   function handleClickPhoto() {}
 
@@ -17,7 +17,6 @@ export default function PhotoContainer(props: PhotoContainerType) {
     <Image
       onClick={() => handleClickPhoto()}
       title={title}
-      summary={summary}
       src={photo}
       $even={even}
       alt={title}

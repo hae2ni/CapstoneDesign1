@@ -3,7 +3,7 @@ import { FILE_LIST } from "./list";
 import { persist } from "zustand/middleware";
 
 interface FileItem {
-  photo: string | null;
+  photo: string;
   title: string;
   category: string;
   summary: string;
@@ -12,8 +12,8 @@ interface FileItem {
 interface FileStore {
   photoList: FileItem[];
   fileName: string;
-  fileUrl: string | null;
-  setFile: (fileName: string, fileUrl: string | null) => void;
+  fileUrl: string;
+  setFile: (fileName: string, fileUrl: string) => void;
   title: string;
   category: string;
   summary: string;
@@ -28,7 +28,7 @@ export const useFileStore = create<FileStore>()(
     (set) => ({
       photoList: FILE_LIST, // 초기 리스트
       fileName: "",
-      fileUrl: null,
+      fileUrl: "",
       category: "",
       title: "",
       summary: "",
@@ -50,7 +50,7 @@ export const useFileStore = create<FileStore>()(
           return {
             photoList: updatedList,
             fileName: "",
-            fileUrl: null,
+            fileUrl: "",
             category: "",
             title: "",
             summary: "",
