@@ -1,13 +1,37 @@
 import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import Category from "./Category";
+import { useFileStore } from "../../core/useFileStore";
 
 export default function PhotoSummary() {
+  const title = useFileStore((state) => state.title);
+  const summary = useFileStore((state) => state.summary);
+  const setTitle = useFileStore((state) => state.setTitle);
+  const setSummary = useFileStore((state) => state.setSummary);
+
+  function handleTitle(event: React.ChangeEvent<HTMLInputElement>) {
+    const title = event.target.value;
+    setTitle(title);
+  }
+
+  function handleSummary(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    const summary = event.target.value;
+    setSummary(summary);
+  }
+
   return (
     <Container>
-      <Title placeholder="제목을 입력해주세요." />
+      <Title
+        onChange={handleTitle}
+        value={title}
+        placeholder="제목을 입력해주세요."
+      />
       <Category />
-      <Summary placeholder="내용을 입력해주세요" />
+      <Summary
+        value={summary}
+        onChange={handleSummary}
+        placeholder="내용을 입력해주세요"
+      />
     </Container>
   );
 }
