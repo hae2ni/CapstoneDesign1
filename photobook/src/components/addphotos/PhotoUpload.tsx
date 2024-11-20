@@ -1,27 +1,38 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import NextBtn from "./NextBtn";
+import { useFileStore } from "../../core/useFileStore";
 
 export default function PhotoUpload() {
-  const inputEl = useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = useState("");
 
-  const fileInputHandler = useCallback((event: Event) => {
-    const target = event.target as HTMLInputElement;
-    const files = target?.files;
+  const setFile = useFileStore((state) => state.setFile);
+  const filii = useFileStore((state) => state.fileName);
+
+  const fileInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
     if (files && files[0]) {
-      setFileName(files[0].name);
+      const file = files[0];
+      setFileName(file.name);
+      const fileUrl = URL.createObjectURL(file); // Blob URL 생성
+      setFile(file.name, fileUrl); // Zustand에 저장
+      console.log(filii);
     }
-  }, []);
+  };
 
   useEffect(() => {
-    if (inputEl.current !== null) {
-      inputEl.current.addEventListener("input", fileInputHandler);
-    }
-    return () => {
-      inputEl.current?.removeEventListener("input", fileInputHandler);
-    };
-  }, [fileInputHandler]);
+    console.log(fileName);
+    console.log(filii);
+  }, [filii, fileName]);
+
+  // useEffect(() => {
+  //   if (inputEl.current !== null) {
+  //     inputEl.current.addEventListener("input", fileInputHandler);
+  //   }
+  //   return () => {
+  //     inputEl.current?.removeEventListener("input", fileInputHandler);
+  //   };
+  // }, [fileInputHandler]);
 
   return (
     <Container>
@@ -35,7 +46,12 @@ export default function PhotoUpload() {
           )}
         </StyledFileInput>
       </label>
-      <Input accept="image/*" type="file" id="file" ref={inputEl} />
+      <Input
+        accept="image/*"
+        onChange={fileInputHandler}
+        type="file"
+        id="file"
+      />
       {fileName && <NextBtn />}
     </Container>
   );

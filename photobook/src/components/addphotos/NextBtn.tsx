@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import { rowFlex } from "../../styles/common";
+import { Link } from "react-router-dom";
 
 export default function NextBtn() {
-  return <Button>등록하러가기 👉</Button>;
+  return (
+    <>
+      <Link to="/summaryphoto">
+        <Button>등록하러가기 👉</Button>
+      </Link>
+    </>
+  );
 }
 
 const Button = styled.button`
