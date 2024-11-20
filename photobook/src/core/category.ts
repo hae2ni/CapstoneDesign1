@@ -1,1 +1,6 @@
-export const CATEGORY_LIST = ["My Lovely", "Travel", "Friends", "School"];
+export const CATEGORY_LIST: string[] = [
+  "My Lovely",
+  "Travel",
+  "Friends",
+  "School",
+];
