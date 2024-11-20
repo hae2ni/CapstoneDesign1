@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CATEGORY_LIST } from "../core/category";
+import { NEW_LIST } from "../core/category";
 import { rowFlex } from "../styles/common";
 import DividedIcon from "../assets/Group 19.svg?react";
 import { useCategoryStore } from "../core/useCategoryStore";
@@ -8,7 +8,6 @@ export default function CategoryList() {
   const clicked = useCategoryStore((state) => state.clickedCategory);
   const setClicked = useCategoryStore((state) => state.setClickedCategory);
 
-  const NEW_LIST: string[] = ["ALL", ...CATEGORY_LIST];
   const listLength = NEW_LIST.length;
   return (
     <Container>

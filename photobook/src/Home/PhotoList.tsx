@@ -2,9 +2,18 @@ import styled from "styled-components";
 import { rowFlex } from "../styles/common";
 import { useFileStore } from "../core/useFileStore";
 import PhotoContainer from "./PhotoContainer";
+import { useCategoryStore } from "../core/useCategoryStore";
+import { NEW_LIST } from "../core/category";
 
 export default function PhotoList() {
+  const category = useCategoryStore((state) => state.clickedCategory);
   const photoList = useFileStore((state) => state.photoList);
+
+  const filteredCategory = NEW_LIST.filter((data, index) => index == category);
+
+  const categoriedList = photoList.filter(
+    (data) => data.category == filteredCategory[0]
+  );
 
   function isInSequence(index: number) {
     const differences = [2, 3, 2, 1]; // 차이 패턴
@@ -22,19 +31,40 @@ export default function PhotoList() {
 
   return (
     <Container>
-      {photoList.map((data, index) => {
-        const { category, photo, title, summary } = data;
-        return (
-          <PhotoContainer
-            key={index}
-            even={isInSequence(index)}
-            category={category}
-            photo={photo}
-            title={title}
-            summary={summary}
-          />
-        );
-      })}
+      {category == 0 ? (
+        <>
+          {photoList.map((data, index) => {
+            const { category, photo, title, summary } = data;
+            return (
+              <PhotoContainer
+                key={index}
+                even={isInSequence(index)}
+                category={category}
+                photo={photo}
+                title={title}
+                summary={summary}
+              />
+            );
+          })}
+        </>
+      ) : (
+        <>
+          {" "}
+          {categoriedList.map((data, index) => {
+            const { category, photo, title, summary } = data;
+            return (
+              <PhotoContainer
+                key={index}
+                even={isInSequence(index)}
+                category={category}
+                photo={photo}
+                title={title}
+                summary={summary}
+              />
+            );
+          })}
+        </>
+      )}
     </Container>
   );
 }
