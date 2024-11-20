@@ -15,10 +15,10 @@ export default function Header() {
 const Container = styled.header`
   ${rowFlex}
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   height: 3.8rem;
 
-  margin: 2rem 3rem;
+  padding: 3rem 3rem;
 `;
 
 const Icon = styled(ClipIcon)`

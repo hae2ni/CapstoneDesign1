@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import { rowFlex } from "./common";
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -9,14 +8,23 @@ ${reset}
   box-sizing: border-box;
 }
 #root {
-width: 100vw;
-height: 100vh;
-  }
+
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
   html, body {
-    min-width: 1024px;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+    overflow: hidden;
 
   
   }
