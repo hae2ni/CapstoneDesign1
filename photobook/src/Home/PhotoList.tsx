@@ -9,7 +9,7 @@ export default function PhotoList() {
   const category = useCategoryStore((state) => state.clickedCategory);
   const photoList = useFileStore((state) => state.photoList);
 
-  const filteredCategory = NEW_LIST.filter((data, index) => index == category);
+  const filteredCategory = NEW_LIST.filter((_, index) => index == category);
 
   const categoriedList = photoList.filter(
     (data) => data.category == filteredCategory[0]
