@@ -1,4 +1,4 @@
-import ClipIcon from "../assets/ClipIt.svg?react";
+import ClipIcon from "../../assets/ClipIt.svg?react";
 import { rowFlex } from "../../styles/common";
 import NavBar from "./NavBar";
 import styled from "styled-components";

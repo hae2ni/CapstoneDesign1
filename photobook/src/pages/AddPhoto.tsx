@@ -1,5 +1,11 @@
-import React from "react";
+import PhotoUpload from "../components/addphotos/PhotoUpload";
+import UploadBtn from "../components/addphotos/UploadBtn";
 
 export default function AddPhoto() {
-  return <div>AddPhoto</div>;
+  return (
+    <>
+      <PhotoUpload />
+      <UploadBtn />
+    </>
+  );
 }
