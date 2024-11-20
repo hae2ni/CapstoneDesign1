@@ -34,7 +34,7 @@ export default function PhotoUpload() {
           )}
         </StyledFileInput>
       </label>
-      <Input type="file" id="file" ref={inputEl} />
+      <Input accept="image/*" type="file" id="file" ref={inputEl} />
     </Container>
   );
 }
