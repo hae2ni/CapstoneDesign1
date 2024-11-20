@@ -58,7 +58,7 @@ const StyledFileInput = styled.div`
 const AttachmentButton = styled.div`
   width: fit-content;
   padding: 16px;
-  background-color: #191b27;
+  background-color: rgba(195, 198, 207, 30);
   border-radius: 12px;
   color: white;
   font-weight: bold;
