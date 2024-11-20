@@ -15,16 +15,24 @@ export default function PhotoSummary() {
 const Container = styled.div`
   ${columnFlex}
   gap: 2rem;
+  font-size: 1.2rem;
+
+  margin-left: 5rem;
 `;
 
 const Title = styled.input`
   display: flex;
   color: #8e919a;
   width: 50rem;
+
   border: none;
   border-bottom: solid #aaaaaa 1px;
   background: none;
   padding: 1rem;
+
+  &::placeholder {
+    font-size: 1.2rem;
+  }
 `;
 
 const Summary = styled.textarea`

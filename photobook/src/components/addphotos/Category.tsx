@@ -18,7 +18,11 @@ export default function Category() {
 const Wrapper = styled.div`
   color: #8e919a;
   ${columnFlex}
+  align-items: flex-start;
   gap: 2rem;
+  width: 50rem;
+
+  font-size: 1.2rem;
 `;
 
 const Container = styled.div`
@@ -28,10 +32,18 @@ const Container = styled.div`
 
 const CategoryWrapper = styled.button`
   ${rowFlex}
-  width: 12rem;
+  width: 10rem;
   height: 4.5rem;
 
   border-radius: 20px;
 
   box-shadow: 3px 3px 10px;
+  font-size: 1.5rem;
+  background-color: #eaeaea;
+
+  color: #c3c6cf;
+
+  &:hover {
+    color: white;
+  }
 `;

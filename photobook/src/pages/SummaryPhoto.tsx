@@ -14,4 +14,5 @@ export default function SummaryPhoto() {
 
 const Container = styled.div`
   ${rowFlex}
+  width: 122.5rem;
 `;
