@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useFileStore } from "../../core/useFileStore";
+import styled from "styled-components";
 
 export default function DisplayFile() {
   const fileName = useFileStore((state) => state.fileName);
@@ -11,16 +12,16 @@ export default function DisplayFile() {
 
   return (
     <div>
-      {fileName ? (
-        <div>
-          <p>Uploaded File: {fileName}</p>
-          {fileUrl && (
-            <img src={fileUrl} alt={fileName} style={{ maxWidth: "200px" }} />
-          )}
-        </div>
-      ) : (
-        <p>No file uploaded</p>
+      {fileName && (
+        <div>{fileUrl && <UploadedPhoto src={fileUrl} alt={fileName} />}</div>
       )}
     </div>
   );
 }
+
+const UploadedPhoto = styled.img`
+  width: 52rem;
+  height: 50rem;
+
+  border-radius: 50px;
+`;

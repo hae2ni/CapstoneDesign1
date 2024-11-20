@@ -8,6 +8,6 @@ interface FileStore {
 
 export const useFileStore = create<FileStore>((set) => ({
   fileName: "",
-  fileUrl: null,
+  fileUrl: "",
   setFile: (fileName, fileUrl) => set({ fileName, fileUrl }),
 }));
