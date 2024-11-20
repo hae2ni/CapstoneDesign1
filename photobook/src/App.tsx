@@ -1,16 +1,14 @@
+import { RouterProvider } from "react-router-dom";
 import GlobalStyle from "./styles/globalStyle";
-import styled from "styled-components";
+import { router } from "./routes/router";
 
 function App() {
   return (
-    <Html>
+    <>
+      <RouterProvider router={router} />
       <GlobalStyle />
-    </Html>
+    </>
   );
 }
 
 export default App;
-
-const Html = styled.html`
-  font-size: 62.5%;
-`;

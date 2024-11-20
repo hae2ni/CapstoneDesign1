@@ -13,7 +13,8 @@ export default function NavBar() {
 
 const Container = styled.nav`
   ${rowFlex}
-  gap: 6.7rem
+  width: 29.5rem;
+  gap: 6.7rem;
 `;
 
 const Text = styled.p`
