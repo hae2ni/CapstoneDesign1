@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
+import Category from "./Category";
 
 export default function PhotoSummary() {
   return (
     <Container>
       <Title placeholder="제목을 입력해주세요." />
+      <Category />
       <Summary placeholder="내용을 입력해주세요" />
     </Container>
   );
