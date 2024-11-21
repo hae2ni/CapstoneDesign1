@@ -1,21 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import { CATEGORY_LIST } from "../../core/category";
 import { useFileStore } from "../../core/useFileStore";
+import { useState } from "react";
 
 export default function Category() {
   const setCategory = useFileStore((state) => state.setCategory);
+  const [clickedCategory, setClickedCateory] = useState<number>(-1);
+
+  function handleCategory(clicked: string, clickedIndex: number) {
+    setCategory(clicked);
+    setClickedCateory(clickedIndex);
+  }
 
   return (
     <Wrapper>
-      <p>앨범을 선택하세요</p>
+      <p>카테고리를 선택하세요</p>
       <Container>
         {CATEGORY_LIST.map((data, index) => {
+          const isSelected = clickedCategory === index;
+
           return (
             <CategoryWrapper
               value={data}
               key={index}
-              onClick={() => setCategory(data)}
+              onClick={() => handleCategory(data, index)}
+              isSelected={isSelected}
             >
               {data}
             </CategoryWrapper>
@@ -41,7 +51,7 @@ const Container = styled.div`
   gap:4rem;
 `;
 
-const CategoryWrapper = styled.button`
+const CategoryWrapper = styled.button<{ isSelected: boolean }>`
   ${rowFlex}
   width: 10rem;
   height: 4.5rem;
@@ -57,4 +67,11 @@ const CategoryWrapper = styled.button`
   &:hover {
     color: white;
   }
+
+  ${({ isSelected }) =>
+    isSelected &&
+    css`
+      background-color: #c3c6cf;
+      color: white;
+    `}
 `;
