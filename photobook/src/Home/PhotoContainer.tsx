@@ -11,17 +11,7 @@ interface PhotoContainerType {
 export default function PhotoContainer(props: PhotoContainerType) {
   const { photo, even, title } = props;
 
-  function handleClickPhoto() {}
-
-  return (
-    <Image
-      onClick={() => handleClickPhoto()}
-      title={title}
-      src={photo}
-      $even={even}
-      alt={title}
-    />
-  );
+  return <Image title={title} src={photo} $even={even} alt={title} />;
 }
 
 interface ImageType {
@@ -29,8 +19,8 @@ interface ImageType {
 }
 
 const Image = styled.img<ImageType>`
-  width: 35rem;
-  height: ${(props) => (props.$even ? "35rem" : "40rem")};
+  width: 32rem;
+  height: ${(props) => (props.$even ? "38rem" : "40rem")};
   border-radius: 10px;
   cursor: pointer;
 `;
