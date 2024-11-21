@@ -49,7 +49,6 @@ export default function PhotoList() {
         </>
       ) : (
         <>
-          {" "}
           {categoriedList.map((data, index) => {
             const { category, photo, title, summary } = data;
             return (

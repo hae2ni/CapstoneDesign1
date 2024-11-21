@@ -32,4 +32,5 @@ const Image = styled.img<ImageType>`
   width: 35rem;
   height: ${(props) => (props.$even ? "35rem" : "40rem")};
   border-radius: 10px;
+  cursor: pointer;
 `;
