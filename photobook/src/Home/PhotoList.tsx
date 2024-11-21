@@ -74,5 +74,6 @@ const Container = styled.div`
 
   flex-wrap: wrap;
 
+  margin-top: 3rem;
   gap: 2rem;
 `;

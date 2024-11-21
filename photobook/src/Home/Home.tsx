@@ -14,8 +14,9 @@ export default function Home() {
 
 const Container = styled.div`
   ${columnFlex}
-
+  justify-content: space-between;
+  min-height: 100%;
   gap: 3rem;
-
+  position: relative;
   margin-top: 5rem;
 `;

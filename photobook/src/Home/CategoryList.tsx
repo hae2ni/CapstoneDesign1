@@ -31,6 +31,8 @@ export default function CategoryList() {
 const Container = styled.div`
   ${rowFlex}
   gap: 2rem;
+  margin-bottom: 2rem;
+  position: absolute;
 `;
 
 const TextContainer = styled.div`
