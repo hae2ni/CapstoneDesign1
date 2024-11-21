@@ -25,15 +25,6 @@ export default function PhotoUpload() {
     console.log(filii);
   }, [filii, fileName]);
 
-  // useEffect(() => {
-  //   if (inputEl.current !== null) {
-  //     inputEl.current.addEventListener("input", fileInputHandler);
-  //   }
-  //   return () => {
-  //     inputEl.current?.removeEventListener("input", fileInputHandler);
-  //   };
-  // }, [fileInputHandler]);
-
   return (
     <Container>
       <label htmlFor="file">

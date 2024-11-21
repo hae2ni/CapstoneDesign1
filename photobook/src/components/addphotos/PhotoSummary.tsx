@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import Category from "./Category";
 import { useFileStore } from "../../core/useFileStore";
+import AddPhotoBtn from "./AddPhotoBtn";
 
 export default function PhotoSummary() {
   const title = useFileStore((state) => state.title);
@@ -32,6 +33,7 @@ export default function PhotoSummary() {
         onChange={handleSummary}
         placeholder="내용을 입력해주세요"
       />
+      <AddPhotoBtn />
     </Container>
   );
 }
