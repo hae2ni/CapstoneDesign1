@@ -24,6 +24,7 @@ interface FourCutTypes extends Urls {
   setSecondPhoto: (text: string) => void;
   setThirdPhoto: (text: string) => void;
   setForthPhoto: (text: string) => void;
+  addNewFile: () => void;
 }
 
 export const useFourCutStore = create<FourCutTypes>()(
@@ -42,7 +43,7 @@ export const useFourCutStore = create<FourCutTypes>()(
       setSecondPhoto: (secondUrl) => set({ secondUrl }),
       setThirdPhoto: (thirdUrl) => set({ thirdUrl }),
       setForthPhoto: (forthUrl) => set({ forthUrl }),
-      setPhotoList: () =>
+      addNewFile: () =>
         set((state) => {
           const newPhoto: Urls = {
             firstUrl: state.firstUrl,

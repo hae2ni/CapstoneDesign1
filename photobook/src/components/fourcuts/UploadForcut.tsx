@@ -3,8 +3,17 @@ import ColorBox from "./ColorBox";
 import { colors } from "../../core/color";
 import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
+import UploadBtn from "./UploadBtn";
+import { useFourCutStore } from "../../core/useFourCuts";
 
 export default function UploadForcut() {
+  const firstUrl = useFourCutStore((state) => state.firstUrl);
+  const secondUrl = useFourCutStore((state) => state.secondUrl);
+  const thirdUrl = useFourCutStore((state) => state.thirdUrl);
+  const forthUrl = useFourCutStore((state) => state.forthUrl);
+
+  const isAllFixed = firstUrl && secondUrl && thirdUrl && forthUrl;
+
   return (
     <Container>
       <Frame />
@@ -17,6 +26,7 @@ export default function UploadForcut() {
             return <ColorBox color={color} />;
           })}
         </ColorBoxContainer>
+        {isAllFixed && <UploadBtn />}
       </TextColorContainer>
     </Container>
   );

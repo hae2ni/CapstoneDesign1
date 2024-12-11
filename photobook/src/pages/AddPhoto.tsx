@@ -17,12 +17,13 @@ export default function AddPhoto() {
 
 const Container = styled.div`
   ${rowFlex}
+  gap: 2rem;
 `;
 
 const Button = styled.button`
   ${rowFlex}
-  margin-top: 10rem;
-  width: fit-content;
+  width: 20rem;
+  height: 5rem;
   padding: 1.6rem;
   background-color: rgba(195, 198, 207, 0.3);
   border-radius: 1.2rem;

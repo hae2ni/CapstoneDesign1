@@ -33,7 +33,7 @@ export default function PhotoSummary() {
         onChange={handleSummary}
         placeholder="내용을 입력해주세요"
       />
-      <AddPhotoBtn />
+      {title && summary ? <AddPhotoBtn /> : ""}
     </Container>
   );
 }
