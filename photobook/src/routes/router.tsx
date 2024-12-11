@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Home/Home";
-import Album from "../pages/Album";
-import AddPhoto from "../pages/AddPhoto";
+import AddFourcuts from "../pages/AddFourcuts";
 import SummaryPhoto from "../pages/SummaryPhoto";
+import AddPhoto from "../pages/AddPhoto";
+import PhotoUploadPage from "../pages/PhotoUploadPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,11 +13,13 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       {
-        path: "/album",
-        element: <Album />,
+        path: "/addFourcuts",
+        element: <AddFourcuts />,
       },
-      { path: "/addphoto", element: <AddPhoto /> },
       { path: "/summaryphoto", element: <SummaryPhoto /> },
+
+      { path: "/addphoto", element: <AddPhoto /> },
+      { path: "/uploadphoto", element: <PhotoUploadPage /> },
     ],
   },
 ]);
