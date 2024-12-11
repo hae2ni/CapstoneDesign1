@@ -81,7 +81,8 @@ const Container = styled.div`
   width: 100%;
   height: 25%;
   margin-bottom: 5px;
-  background-color: gray;
+  border-radius: 10px;
+  background-color: aliceblue;
   &:last-child {
     margin-bottom: 0;
   }

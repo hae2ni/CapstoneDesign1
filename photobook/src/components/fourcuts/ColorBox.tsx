@@ -23,7 +23,9 @@ export default function ColorBox({ color }: ColorBoxProps) {
 
 const Box = styled.button`
   ${rowFlex}
-  width: 5rem;
-  height: 4rem;
+  width: 8rem;
+  height: 8rem;
   background-color: ${({ color }) => color};
+  border-radius: 10px;
+  font-size: 3rem;
 `;
