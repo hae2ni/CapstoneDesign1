@@ -1,13 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { FOUR_CUTS } from "./forcutList";
-
-interface Urls {
-  firstUrl: string;
-  secondUrl: string;
-  thirdUrl: string;
-  forthUrl: string;
-}
+import { Urls } from "../types/urltypes";
 
 interface PhotoListInterface {
   forcutName: string;
