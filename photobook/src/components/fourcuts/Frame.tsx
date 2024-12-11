@@ -2,11 +2,11 @@ import styled from "styled-components";
 import AddPhoto from "./AddPhoto";
 
 export default function Frame() {
-  const list = [1, 2, 3, 4];
+  const list = [0, 1, 2, 3];
   return (
     <FrameContainer>
-      {list.map(() => {
-        return <AddPhoto />;
+      {list.map((num) => {
+        return <AddPhoto key={num} num={num} />;
       })}
     </FrameContainer>
   );
