@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import { rowFlex } from "../../styles/common";
 import { useFileStore } from "../../core/useFileStore";
+import { Link } from "react-router-dom";
 
 export default function AddPhotoBtn() {
   const addNewFile = useFileStore((state) => state.addNewFile);
-  return <Button onClick={addNewFile}>사진 등록하기</Button>;
+  return (
+    <Link to="/">
+      <Button onClick={addNewFile}>사진 등록하기</Button>
+    </Link>
+  );
 }
 
 const Button = styled.button`

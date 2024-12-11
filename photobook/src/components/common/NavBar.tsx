@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <Container>
       <Text to="/">Home</Text>
-      <Text to="/album">Albums</Text>
+      <Text to="/addFourcuts">Fourcuts</Text>
       <Text to="/addphoto">AddPhotos</Text>
     </Container>
   );
