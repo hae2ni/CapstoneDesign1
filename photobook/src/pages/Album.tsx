@@ -1,3 +1,5 @@
+import Frame from "../components/fourcuts/Frame";
+
 export default function Album() {
-  return <div>Album</div>;
+  return <Frame />;
 }
