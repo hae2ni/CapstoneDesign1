@@ -1,5 +1,5 @@
-import { SketchPicker } from "react-color";
+import { TwitterPicker } from "react-color";
 
 export default function ColorPicker() {
-  return <SketchPicker />;
+  return <TwitterPicker />;
 }

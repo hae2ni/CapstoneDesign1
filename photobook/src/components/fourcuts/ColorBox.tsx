@@ -15,9 +15,11 @@ export default function ColorBox({ color }: ColorBoxProps) {
   }
 
   return (
-    <Box color={color} onClick={() => handleClickColor(color)}>
-      {color === selectedColor ? "🤍" : ""}
-    </Box>
+    <>
+      <Box color={color} onClick={() => handleClickColor(color)}>
+        {color === selectedColor ? "🤍" : ""}
+      </Box>
+    </>
   );
 }
 

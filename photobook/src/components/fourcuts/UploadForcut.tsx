@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import UploadBtn from "./UploadBtn";
 import { useFourCutStore } from "../../core/useFourCuts";
+import ColorPicker from "./ColorPicker";
 
 export default function UploadForcut() {
   const firstUrl = useFourCutStore((state) => state.firstUrl);
@@ -25,6 +26,7 @@ export default function UploadForcut() {
             const { color } = item;
             return <ColorBox color={color} />;
           })}
+          {/* <ColorPicker /> */}
         </ColorBoxContainer>
         {isAllFixed && <UploadBtn />}
       </TextColorContainer>
