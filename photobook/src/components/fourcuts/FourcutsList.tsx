@@ -6,9 +6,11 @@ import { rowFlex } from "../../styles/common";
 export default function FourcutsList() {
   return (
     <Container>
-      {FOUR_CUTS.map((item) => {
+      {FOUR_CUTS.map((item, index) => {
         const { photoList, color } = item;
-        return <PhotoContainer photoList={photoList} color={color} />;
+        return (
+          <PhotoContainer key={index} photoList={photoList} color={color} />
+        );
       })}
     </Container>
   );
