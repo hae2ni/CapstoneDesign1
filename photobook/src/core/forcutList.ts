@@ -1,7 +1,58 @@
 export const FOUR_CUTS = [
   {
     forcutName: "fourcuts",
-    color: "#3FA9F5",
+    color: "#ff968a",
+
+    photoList: [
+      {
+        firstUrl:
+          "https://i.pinimg.com/474x/07/33/28/0733282938b21af94ac7e48ed176fd71.jpg",
+        secondUrl:
+          "https://i.pinimg.com/474x/6a/db/70/6adb70debece8c4ad0ece1aad0acd76d.jpg",
+        thirdUrl:
+          "https://i.pinimg.com/474x/55/36/12/5536127aadf4b88ede9189976d87999d.jpg",
+        forthUrl:
+          "https://i.pinimg.com/474x/24/f7/70/24f77023151433d01f64b71e01ce6a9d.jpg",
+      },
+    ],
+  },
+  {
+    forcutName: "fourcuts",
+    color: "#fed7c3",
+
+    photoList: [
+      {
+        firstUrl:
+          "https://i.pinimg.com/474x/67/6d/5d/676d5d1a6f7d7913bbe99deea213fb13.jpg",
+        secondUrl:
+          "https://i.pinimg.com/736x/22/40/9f/22409f7e1bb024649af79ba2cba38d5f.jpg",
+        thirdUrl:
+          "https://i.pinimg.com/474x/b3/1e/6b/b31e6bdd6f6d1f4b28f76cac4e0b7550.jpg",
+        forthUrl:
+          "https://i.pinimg.com/474x/92/2a/88/922a88894fb69ec8d6360931a767bc4b.jpg",
+      },
+    ],
+  },
+  {
+    forcutName: "fourcuts",
+    color: "#ecd5e3",
+
+    photoList: [
+      {
+        firstUrl:
+          "https://i.pinimg.com/474x/ee/2a/71/ee2a7149341c2b23ae2e9c7358ec247d.jpg",
+        secondUrl:
+          "https://i.pinimg.com/474x/1e/a9/68/1ea9684eedd573de95500a3841d731e7.jpg",
+        thirdUrl:
+          "https://i.pinimg.com/474x/5d/b5/92/5db592ce4abe822b92d7661438fcc649.jpg",
+        forthUrl:
+          "https://i.pinimg.com/474x/8d/9b/f8/8d9bf86ca6e5e880fa683600b06f073f.jpg",
+      },
+    ],
+  },
+  {
+    forcutName: "fourcuts",
+    color: "#b6cfb6",
 
     photoList: [
       {
