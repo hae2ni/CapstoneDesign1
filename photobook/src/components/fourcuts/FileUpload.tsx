@@ -49,7 +49,7 @@ export default function FileUpload({ num }: FileUploadProps) {
         <>
           <label htmlFor="file">
             <StyledFileInput>
-              <AttachmentButton>🔗 FILE UPLOAD</AttachmentButton>
+              <AttachmentButton>사진을 선택하세요</AttachmentButton>
             </StyledFileInput>
           </label>
           <Input
@@ -72,6 +72,7 @@ const StyledFileInput = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 1.6rem;
   padding: 0.8rem;
   width: 100%;
@@ -80,6 +81,9 @@ const StyledFileInput = styled.div`
 const Container = styled.div`
   width: 100%;
   height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 5px;
   border-radius: 10px;
   background-color: aliceblue;
@@ -90,10 +94,10 @@ const Container = styled.div`
 
 const AttachmentButton = styled.div`
   width: fit-content;
+
   padding: 1.6rem;
-  background-color: rgba(195, 198, 207, 30);
   border-radius: 1.2rem;
-  color: white;
+  color: #b19f9a;
   font-weight: bold;
   cursor: pointer;
 `;

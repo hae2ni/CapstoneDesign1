@@ -1,51 +1,51 @@
 export const colors = [
   {
-    color: "#3FA9F5",
+    color: "#ABDEE6",
     isChoosed: false,
   },
   {
-    color: "#7EA0C4",
+    color: "#C6DBDA",
 
     isChoosed: false,
   },
   {
-    color: "#BB80D1",
+    color: "#B6CFB6",
     isChoosed: false,
   },
   {
-    color: "#FF4C00",
+    color: "#97C1A9",
     isChoosed: false,
   },
   {
-    color: "#00B392",
+    color: "#ECEAE4",
     isChoosed: false,
   },
   {
-    color: "#69C9BA",
+    color: "#FED7C3",
     isChoosed: false,
   },
   {
-    color: "#FD92A3",
+    color: "#F6EAC2",
     isChoosed: false,
   },
   {
-    color: "#F7323F",
+    color: "#FCB9AA",
     isChoosed: false,
   },
   {
-    color: "#72D54A",
+    color: "#FF968A",
     isChoosed: false,
   },
   {
-    color: "#D5D755",
+    color: "#F3B0C3",
     isChoosed: false,
   },
   {
-    color: "#FFD235",
+    color: "#ECD5E3",
     isChoosed: false,
   },
   {
-    color: "#FF9E16",
+    color: "#FEE1E8",
     isChoosed: false,
   },
 ];
