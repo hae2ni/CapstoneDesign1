@@ -32,7 +32,7 @@ export default function UploadForcut() {
   function AlertInput(event: React.FormEvent<HTMLInputElement>) {
     const target = event.target as HTMLInputElement;
     if (target.value.length >= 15) {
-      alert("이벤트 실행");
+      alert("최대 15자수 입니다.");
     }
   }
 
@@ -58,11 +58,11 @@ export default function UploadForcut() {
               maxLength={15}
               onChange={handleMemo}
               value={memo}
-              placeholder="무슨 내용을 남길까요?"
+              placeholder="어떤 추억인가요? (최대 15글자)"
             />
           </form>
           <MemoBtn onClick={handleOnClick}>확인</MemoBtn>
-          <button onClick={handleArrayBtn}>정렬</button>
+          <MemoBtn onClick={handleArrayBtn}>정렬</MemoBtn>
         </MemoInputText>
         <Text>프레임 색깔을 선택해주세요!</Text>
 
@@ -123,7 +123,7 @@ const TextColorContainer = styled.div`
 const TextInput = styled.input`
   ${rowFlex}
   color: #8e919a;
-  width: 20rem;
+  width: 23rem;
   border: solid #6f7177 0.5px;
   background: none;
   padding: 1rem;
