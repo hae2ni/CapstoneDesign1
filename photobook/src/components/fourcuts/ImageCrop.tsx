@@ -23,7 +23,7 @@ export default function ImageCrop({
   const [zoom, setZoom] = useState<number>(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState<Area | null>(null);
 
-  function handleCropComplete(croppedAreaPixels: Area) {
+  function handleCropComplete(_croppedArea: Area, croppedAreaPixels: Area) {
     setCroppedAreaPixels(croppedAreaPixels);
   }
 

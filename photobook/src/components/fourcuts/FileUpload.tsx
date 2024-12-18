@@ -39,7 +39,7 @@ export default function FileUpload({ num }: FileUploadProps) {
     }
   };
 
-  function hanldeCropComplete(croppedImageUrl: string) {
+  function hanldeCropComplete(croppedImageUrl) {
     setCroopedImage(croppedImageUrl);
     setPhoto(croppedImageUrl);
   }

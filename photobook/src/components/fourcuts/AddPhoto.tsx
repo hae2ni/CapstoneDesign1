@@ -4,7 +4,7 @@ import FileUpload from "./FileUpload";
 export default function AddPhoto({ num }: FileUploadProps) {
   return (
     <>
-      <FileUpload num={num} />\{" "}
+      <FileUpload num={num} />
     </>
   );
 }
