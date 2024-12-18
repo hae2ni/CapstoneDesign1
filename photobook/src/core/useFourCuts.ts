@@ -7,6 +7,8 @@ export interface PhotoListInterface {
   forcutName: string;
   color: string;
   memo?: string;
+  array?: number;
+
   photoList: Urls[];
 }
 
@@ -15,7 +17,8 @@ interface FourCutTypes extends Urls {
   forcutName: string;
   color: string;
   memo: string;
-
+  array: number;
+  setArray: (text: number) => void;
   setMemo: (text: string) => void;
   setColor: (text: string) => void;
   setFourcutName: (text: string) => void;
@@ -37,6 +40,8 @@ export const useFourCutStore = create<FourCutTypes>()(
       forthUrl: "",
       color: "",
       memo: "",
+      array: 0,
+      setArray: (array) => set({ array }),
       setMemo: (memo) => set({ memo }),
       setColor: (color) => set({ color }),
       setFourcutName: (forcutName) => set({ forcutName }),
@@ -56,6 +61,7 @@ export const useFourCutStore = create<FourCutTypes>()(
 
           const newColor = state.color;
           const newMemo = state.memo;
+          const newArray = state.array;
 
           const updatedList = [
             ...state.photosList,
@@ -64,6 +70,7 @@ export const useFourCutStore = create<FourCutTypes>()(
               photoList: [newPhoto],
               color: newColor,
               memo: newMemo,
+              array: newArray,
             },
           ];
           return {
@@ -74,6 +81,8 @@ export const useFourCutStore = create<FourCutTypes>()(
             secondUrl: "",
             thirdUrl: "",
             forthUrl: "",
+            memo: "",
+            array: 0,
           };
         }),
     }),

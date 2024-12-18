@@ -19,6 +19,8 @@ export const FOUR_CUTS: PhotoListInterface[] = [
         forthUrl: firstLast,
       },
     ],
+    memo: "크리스마스",
+    array: 2,
   },
   {
     forcutName: "fourcuts",
@@ -36,6 +38,8 @@ export const FOUR_CUTS: PhotoListInterface[] = [
           "https://i.pinimg.com/474x/92/2a/88/922a88894fb69ec8d6360931a767bc4b.jpg",
       },
     ],
+    memo: "애기랑",
+    array: 1,
   },
   {
     forcutName: "fourcuts",

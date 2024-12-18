@@ -9,11 +9,13 @@ export default function FourcutsList() {
   return (
     <Container>
       {IMG_LIST.map((item, index) => {
-        const { photoList, color } = item;
+        const { photoList, color, memo, array } = item;
         const className = `card-${uuid()}`;
         return (
           <PhotoContainer
             className={className}
+            memo={memo}
+            array={array}
             key={index}
             photoList={photoList}
             color={color}

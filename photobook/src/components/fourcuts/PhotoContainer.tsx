@@ -7,6 +7,8 @@ import { saveAs } from "file-saver";
 interface PhotoContainerProps {
   className: string;
   color: string;
+  memo?: string;
+  array?: number;
   photoList: {
     firstUrl: string;
     secondUrl: string;
@@ -16,7 +18,7 @@ interface PhotoContainerProps {
 }
 
 export default function PhotoContainer(props: PhotoContainerProps) {
-  const { photoList, color, className } = props;
+  const { photoList, color, className, memo, array } = props;
   const [isHover, setIsHover] = useState(false);
 
   function onClickDownload() {
@@ -58,6 +60,7 @@ export default function PhotoContainer(props: PhotoContainerProps) {
             key={index}
             color={color}
           >
+            {array && <Memo array={array}> {memo}</Memo>}
             {list.map((url, idx) => (
               <UploadedPhoto key={idx} src={url} />
             ))}
@@ -88,4 +91,18 @@ const UploadedPhoto = styled.img`
   height: 25%;
   margin-bottom: 5px;
   border-radius: 10px;
+`;
+
+const Memo = styled.div<{ array: number }>`
+  display: flex;
+
+  justify-content: ${(props) =>
+    props.array === 0
+      ? "flex-start"
+      : props.array === 1
+      ? "center"
+      : "flex-end"};
+
+  margin-bottom: 0.5rem;
+  color: gray;
 `;
