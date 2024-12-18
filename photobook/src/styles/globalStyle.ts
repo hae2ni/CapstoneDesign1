@@ -26,8 +26,10 @@ align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
+    font-size: 100%;
    overflow-x: hidden;
+   overflow-y: hidden;
+
    
   }
 a {
