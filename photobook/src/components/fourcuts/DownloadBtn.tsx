@@ -1,3 +1,8 @@
 export default function DownloadBtn({ onClick }: { onClick: () => void }) {
-  return <button onClick={onClick}>다운로드</button>;
+  function handleonDownloadBth() {
+    console.log("here");
+    onClick();
+  }
+
+  return <button onClick={handleonDownloadBth}>다운로드</button>;
 }

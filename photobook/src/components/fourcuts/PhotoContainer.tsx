@@ -3,6 +3,7 @@ import DownloadBtn from "./DownloadBtn";
 import { useState } from "react";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
+import Img from "../../assets/christmasImage.jpg";
 
 interface PhotoContainerProps {
   color: string;
@@ -22,6 +23,7 @@ export default function PhotoContainer(props: PhotoContainerProps) {
     domtoimage.toBlob(document.querySelector(".card")!).then((blob) => {
       saveAs(blob, "card.png");
     });
+    console.log("here");
   }
 
   function handleMouseOver() {

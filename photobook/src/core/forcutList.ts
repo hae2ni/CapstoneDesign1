@@ -1,3 +1,10 @@
+import {
+  firstFirst,
+  firstSecond,
+  firstThird,
+  firstLast,
+} from "../assets/img/imgList";
+
 export const FOUR_CUTS = [
   {
     forcutName: "fourcuts",
@@ -5,14 +12,10 @@ export const FOUR_CUTS = [
 
     photoList: [
       {
-        firstUrl:
-          "https://i.pinimg.com/474x/07/33/28/0733282938b21af94ac7e48ed176fd71.jpg",
-        secondUrl:
-          "https://i.pinimg.com/474x/6a/db/70/6adb70debece8c4ad0ece1aad0acd76d.jpg",
-        thirdUrl:
-          "https://i.pinimg.com/474x/55/36/12/5536127aadf4b88ede9189976d87999d.jpg",
-        forthUrl:
-          "https://i.pinimg.com/474x/24/f7/70/24f77023151433d01f64b71e01ce6a9d.jpg",
+        firstUrl: firstFirst,
+        secondUrl: firstSecond,
+        thirdUrl: firstThird,
+        forthUrl: firstLast,
       },
     ],
   },
