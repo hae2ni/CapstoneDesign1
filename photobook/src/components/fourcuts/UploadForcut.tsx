@@ -9,6 +9,7 @@ import { useState } from "react";
 
 export default function UploadForcut() {
   const [memo, setMemo] = useState("");
+  const [array, setArray] = useState(0);
 
   const confirmMemo = useFourCutStore((state) => state.setMemo);
 
@@ -35,9 +36,19 @@ export default function UploadForcut() {
     }
   }
 
+  function handleArrayBtn() {
+    if (array == 0) {
+      setArray(1);
+    } else if (array == 1) {
+      setArray(2);
+    } else if (array == 2) {
+      setArray(0);
+    }
+  }
+
   return (
     <Container>
-      <Frame />
+      <Frame array={array} />
       <TextColorContainer>
         <Text>메모를 입력해주세요</Text>
         <MemoInputText>
@@ -51,6 +62,7 @@ export default function UploadForcut() {
             />
           </form>
           <MemoBtn onClick={handleOnClick}>확인</MemoBtn>
+          <button onClick={handleArrayBtn}>정렬</button>
         </MemoInputText>
         <Text>프레임 색깔을 선택해주세요!</Text>
 
