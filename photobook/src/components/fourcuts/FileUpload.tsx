@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { useFourCutStore } from "../../core/useFourCuts";
 import { FileUploadProps } from "../../types/FourcutsProps";
 import UploadedPhoto from "./UploadedPhoto";
+import ImageCrop from "./ImageCrop";
 
 export default function FileUpload({ num }: FileUploadProps) {
   const [fileName, setFileName] = useState("");
+  const [uploadedImage, setUploadedImage] = useState("");
+  const [croppedImage, setCroopedImage] = useState("");
 
   const firstUrl = useFourCutStore((state) => state.firstUrl);
   const secondUrl = useFourCutStore((state) => state.secondUrl);
@@ -25,7 +28,6 @@ export default function FileUpload({ num }: FileUploadProps) {
   ];
 
   const setPhoto = setPhotoList[num].setFn;
-  const photoUrl = setPhotoList[num].url;
 
   const fileInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -33,9 +35,14 @@ export default function FileUpload({ num }: FileUploadProps) {
       const file = files[0];
       setFileName(file.name);
       const fileUrl = URL.createObjectURL(file);
-      setPhoto(fileUrl);
+      setUploadedImage(fileUrl);
     }
   };
+
+  function hanldeCropComplete(croppedImageUrl: string) {
+    setCroopedImage(croppedImageUrl);
+    setPhoto(croppedImageUrl);
+  }
 
   useEffect(() => {
     console.log(fileName);
@@ -43,8 +50,10 @@ export default function FileUpload({ num }: FileUploadProps) {
 
   return (
     <Container>
-      {photoUrl ? (
-        <UploadedPhoto photoUrl={photoUrl} />
+      {croppedImage ? (
+        <UploadedPhoto photoUrl={croppedImage} />
+      ) : uploadedImage ? (
+        <ImageCrop image={uploadedImage} onCropComplete={hanldeCropComplete} />
       ) : (
         <>
           <label htmlFor="file">
