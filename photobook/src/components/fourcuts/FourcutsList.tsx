@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { FOUR_CUTS } from "../../core/forcutList";
 import PhotoContainer from "./PhotoContainer";
 import { rowFlex } from "../../styles/common";
+import { useFourCutStore } from "../../core/useFourCuts";
 
 export default function FourcutsList() {
+  const IMG_LIST = useFourCutStore((state) => state.photosList);
   return (
     <Container>
-      {FOUR_CUTS.map((item, index) => {
+      {IMG_LIST.map((item, index) => {
         const { photoList, color } = item;
         return (
           <PhotoContainer key={index} photoList={photoList} color={color} />

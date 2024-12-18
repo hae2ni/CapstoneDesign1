@@ -3,8 +3,9 @@ import { persist } from "zustand/middleware";
 import { FOUR_CUTS } from "./forcutList";
 import { Urls } from "../types/urltypes";
 
-interface PhotoListInterface {
+export interface PhotoListInterface {
   forcutName: string;
+  color: string;
   photoList: Urls[];
 }
 
@@ -12,6 +13,7 @@ interface FourCutTypes extends Urls {
   photosList: PhotoListInterface[];
   forcutName: string;
   color: string;
+
   setColor: (text: string) => void;
   setFourcutName: (text: string) => void;
   setFirstPhoto: (text: string) => void;
@@ -37,6 +39,7 @@ export const useFourCutStore = create<FourCutTypes>()(
       setSecondPhoto: (secondUrl) => set({ secondUrl }),
       setThirdPhoto: (thirdUrl) => set({ thirdUrl }),
       setForthPhoto: (forthUrl) => set({ forthUrl }),
+
       addNewFile: () =>
         set((state) => {
           const newPhoto: Urls = {
@@ -46,11 +49,12 @@ export const useFourCutStore = create<FourCutTypes>()(
             forthUrl: state.forthUrl,
           };
 
+          const newColor = state.color;
+
           const updatedList = [
             ...state.photosList,
-            { forcutName: state.forcutName, photoList: [newPhoto] },
+            { forcutName: "안녕", photoList: [newPhoto], color: newColor },
           ];
-
           return {
             photosList: updatedList,
             forcutName: "",

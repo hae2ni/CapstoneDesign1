@@ -4,8 +4,9 @@ import {
   firstThird,
   firstLast,
 } from "../assets/img/imgList";
+import { PhotoListInterface } from "./useFourCuts";
 
-export const FOUR_CUTS = [
+export const FOUR_CUTS: PhotoListInterface[] = [
   {
     forcutName: "fourcuts",
     color: "#ff968a",

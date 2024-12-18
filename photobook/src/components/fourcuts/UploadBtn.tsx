@@ -7,7 +7,7 @@ export default function UploadBtn() {
   const addNewFile = useFourCutStore((state) => state.addNewFile);
 
   return (
-    <Link to="/">
+    <Link to="/fourcutsAlbum">
       <Button onClick={addNewFile}>사진 등록하기</Button>
     </Link>
   );
