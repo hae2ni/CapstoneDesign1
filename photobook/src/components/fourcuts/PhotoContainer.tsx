@@ -5,6 +5,7 @@ import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
 
 interface PhotoContainerProps {
+  className: string;
   color: string;
   photoList: {
     firstUrl: string;
@@ -15,11 +16,11 @@ interface PhotoContainerProps {
 }
 
 export default function PhotoContainer(props: PhotoContainerProps) {
-  const { photoList, color } = props;
+  const { photoList, color, className } = props;
   const [isHover, setIsHover] = useState(false);
 
   function onClickDownload() {
-    const card = document.querySelector(".card");
+    const card = document.querySelector(`.${className}`);
     if (!card) return;
 
     const downloadButton = card.querySelector(".download-btn") as HTMLElement;
@@ -27,7 +28,7 @@ export default function PhotoContainer(props: PhotoContainerProps) {
       downloadButton.style.visibility = "hidden";
     }
 
-    domtoimage.toBlob(card!).then((blob) => {
+    domtoimage.toBlob(card).then((blob) => {
       saveAs(blob, "card.png");
       if (downloadButton) {
         downloadButton.style.visibility = "visible";
@@ -53,7 +54,7 @@ export default function PhotoContainer(props: PhotoContainerProps) {
           <FrameContainer
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
-            className="card"
+            className={className}
             key={index}
             color={color}
           >
