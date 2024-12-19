@@ -20,6 +20,8 @@ export default function Frame({ array }: { array: number }) {
 const Memo = styled.div<{ array: number }>`
   display: flex;
 
+  font-size: 1.5rem;
+
   justify-content: ${(props) =>
     props.array === 0
       ? "flex-start"
