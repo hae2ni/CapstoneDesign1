@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { FOUR_CUTS } from "./forcutList";
+import { FOUR_CUTS } from "../core/forcutList";
 import { Urls } from "../types/urltypes";
 
 export interface PhotoListInterface {

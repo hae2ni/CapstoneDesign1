@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { FILE_LIST } from "./list";
+import { FILE_LIST } from "../core/list";
 import { persist } from "zustand/middleware";
 
 interface FileItem {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 import FileUpload from "./FileUpload";
 
 export default function Frame({ array }: { array: number }) {

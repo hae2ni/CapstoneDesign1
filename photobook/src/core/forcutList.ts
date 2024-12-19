@@ -4,7 +4,7 @@ import {
   firstThird,
   firstLast,
 } from "../assets/img/imgList";
-import { PhotoListInterface } from "./useFourCuts";
+import { PhotoListInterface } from "../store/useFourCuts";
 
 export const FOUR_CUTS: PhotoListInterface[] = [
   {

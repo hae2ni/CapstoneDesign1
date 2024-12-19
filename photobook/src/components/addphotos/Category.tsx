@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import { CATEGORY_LIST } from "../../core/category";
-import { useFileStore } from "../../core/useFileStore";
+import { useFileStore } from "../../store/useFileStore";
 import { useState } from "react";
 
 export default function Category() {

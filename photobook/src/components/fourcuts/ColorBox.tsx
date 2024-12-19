@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rowFlex } from "../../styles/common";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 
 interface ColorBoxProps {
   color: string;

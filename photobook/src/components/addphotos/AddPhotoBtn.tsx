@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rowFlex } from "../../styles/common";
-import { useFileStore } from "../../core/useFileStore";
+import { useFileStore } from "../../store/useFileStore";
 import { Link } from "react-router-dom";
 
 export default function AddPhotoBtn() {

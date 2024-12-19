@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import NextBtn from "./NextBtn";
-import { useFileStore } from "../../core/useFileStore";
+import { useFileStore } from "../../store/useFileStore";
 
 export default function PhotoUpload() {
   const [fileName, setFileName] = useState("");

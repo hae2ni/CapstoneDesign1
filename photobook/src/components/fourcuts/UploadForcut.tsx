@@ -4,7 +4,7 @@ import { colors } from "../../core/color";
 import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import UploadBtn from "./UploadBtn";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 import { useState } from "react";
 
 export default function UploadForcut() {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PhotoContainer from "./PhotoContainer";
 import { rowFlex } from "../../styles/common";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 import uuid from "react-uuid";
 
 export default function FourcutsList() {

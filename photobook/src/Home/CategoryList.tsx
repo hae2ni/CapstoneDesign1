@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NEW_LIST } from "../core/category";
 import { rowFlex } from "../styles/common";
 import DividedIcon from "../assets/Group 19.svg?react";
-import { useCategoryStore } from "../core/useCategoryStore";
+import { useCategoryStore } from "../store/useCategoryStore";
 
 export default function CategoryList() {
   const clicked = useCategoryStore((state) => state.clickedCategory);

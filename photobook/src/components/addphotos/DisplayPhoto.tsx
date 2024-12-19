@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useFileStore } from "../../core/useFileStore";
+import { useFileStore } from "../../store/useFileStore";
 import styled from "styled-components";
 
 export default function DisplayFile() {

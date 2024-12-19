@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 import { FileUploadProps } from "../../types/FourcutsProps";
 import UploadedPhoto from "./UploadedPhoto";
 import ImageCrop from "./ImageCrop";

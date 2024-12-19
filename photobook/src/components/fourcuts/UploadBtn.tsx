@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useFourCutStore } from "../../core/useFourCuts";
+import { useFourCutStore } from "../../store/useFourCuts";
 import styled from "styled-components";
 import { rowFlex } from "../../styles/common";
 

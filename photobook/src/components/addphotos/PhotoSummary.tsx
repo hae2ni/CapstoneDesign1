@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { columnFlex, rowFlex } from "../../styles/common";
 import Category from "./Category";
-import { useFileStore } from "../../core/useFileStore";
+import { useFileStore } from "../../store/useFileStore";
 import AddPhotoBtn from "./AddPhotoBtn";
 
 export default function PhotoSummary() {
