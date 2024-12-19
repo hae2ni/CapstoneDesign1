@@ -3,6 +3,7 @@ import DownloadBtn from "./DownloadBtn";
 import { useState } from "react";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
+import { ShareTwitter } from "./Share";
 
 interface PhotoContainerProps {
   className: string;
@@ -53,21 +54,29 @@ export default function PhotoContainer(props: PhotoContainerProps) {
         const list = [firstUrl, secondUrl, thirdUrl, forthUrl];
 
         return (
-          <FrameContainer
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            className={className}
-            key={index}
-            color={color}
-          >
-            {array && <Memo array={array}> {memo}</Memo>}
-            {list.map((url, idx) => (
-              <UploadedPhoto key={idx} src={url} />
-            ))}
-            {isHover && (
-              <DownloadBtn className="download-btn" onClick={onClickDownload} />
-            )}
-          </FrameContainer>
+          <>
+            <FrameContainer
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+              className={className}
+              key={index}
+              color={color}
+            >
+              {array && <Memo array={array}> {memo}</Memo>}
+              {list.map((url, idx) => (
+                <UploadedPhoto key={idx} src={url} />
+              ))}
+              {isHover && (
+                <>
+                  <DownloadBtn
+                    className="download-btn"
+                    onClick={onClickDownload}
+                  />
+                  <ShareTwitter />
+                </>
+              )}
+            </FrameContainer>
+          </>
         );
       })}
     </>
