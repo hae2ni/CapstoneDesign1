@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { rowFlex } from "../styles/common";
-import { useFileStore } from "../core/useFileStore";
+import { useFileStore } from "../store/useFileStore";
 import PhotoContainer from "./PhotoContainer";
-import { useCategoryStore } from "../core/useCategoryStore";
+import { useCategoryStore } from "../store/useCategoryStore";
 import { NEW_LIST } from "../core/category";
 import { useState } from "react";
 
