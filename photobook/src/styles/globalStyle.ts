@@ -26,7 +26,7 @@ align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 100%;
+    font-size: 70%;
    overflow-x: hidden;
    overflow-y: hidden;
 
